@@ -50,6 +50,7 @@ class App extends Component {
       <div className="App">
         <Navbar
           totalCounters={this.state.counters.filter((c) => c.value > 0).length}
+          totalItems={this.state.counters.map(a => a.value).reduce((b, c) => b +c)}
         />
         <main className="container"></main>
         <Counters
